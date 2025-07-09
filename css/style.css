@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --Very-Dark-Grayish-Blue:rgb(72, 85, 106);
+    --Desaturated--Dark--Blue:#6d7f97;
+    --Grayish--Blue:#ecf2f8;
+    --font: "Manrope", sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    font-size: 13px;
+    background-color: var(--Grayish--Blue);
+    font-family: var(--font);
+}
+
+.containerArticle{
+    width: 90%;
+    max-width: 800px;
+    height: 35%;
+    max-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    background-color: #fff;
+    border-radius: 13px;
+    box-shadow: 0px 1px 7px #00000063;
+}
+
+.imageContainer{
+    width: 80%;
+    height: 100%;
+}
+
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius:13px;
+    border-bottom-left-radius:13px;
+    background-size: cover;
+}
+
+.containerText{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.containerText h2, .detailsCreator h3{
+    color: var(--Desaturated--Dark--Blue);
+}
+
+.containerText p, .detailsCreator p{
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.detailsCreator{
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.author{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.containerAvatar{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.containerAvatar img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.shareButton{
+    background-color: var(--Grayish--Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+
+.shareButton img{
+    cursor: pointer;
+}
+
+.boxPopUp {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    display: flex;
+       visibility: hidden;;
+    position: absolute;
+    bottom: 0px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    padding: 15px;
+    border-radius: 12px;
+    gap: 10px; 
+    visibility: hidden;
+}
+
+.boxPopUp p{
+    color: #fff;
+}
+
+
+
+.boxPopUp .iconShare{
+    width: 20px;
+    height: 20px;
+}
+
+
+.boxPopUp.activePopUp{
+    visibility: visible;
+    transition: .3s;
+    bottom: 60px; 
+
+}
